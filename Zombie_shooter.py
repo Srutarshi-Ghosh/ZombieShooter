@@ -54,14 +54,11 @@ class Game:
 
     def load_data(self):
 
-        if getattr(sys, 'frozen', False):
-            game_folder = sys._MEIPASS
-        else:
-            game_folder = os.path.dirname(__file__)
+        game_folder = os.path.dirname(__file__)
 
         img_folder = os.path.join(game_folder, 'Tile_img')
-        snd_folder = os.path.join(os.path.join(game_folder, 'Tile_Sounds'), 'snd')
-        music_folder = os.path.join(os.path.join(game_folder, 'Tile_Sounds'), 'music')
+        snd_folder = os.path.join(game_folder, 'snd')
+        music_folder = os.path.join(game_folder, 'music')
 
         self.img_folder = img_folder
 
